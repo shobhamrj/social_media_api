@@ -10,7 +10,7 @@ postRouter
   .post('/api/like/:id', authenticate.verify, postController.like)
   .post('/api/unlike/:id', authenticate.verify, postController.unlike)
   .post('/api/comment/:id', authenticate.verify, postController.addComment)
-  .get('/api/posts/:id', postController.getById)
+  .get('/api/posts/:id', authenticate.verify, postController.getById)
   .get('/api/all_posts', authenticate.verify, postController.getAll)
 
 module.exports = postRouter

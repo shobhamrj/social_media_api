@@ -4,6 +4,7 @@ const userRouter = require('./routes/user')
 const postRouter = require('./routes/post')
 const followRouter = require('./routes/follow')
 
+
 app.use(express.json());
 
 app.use(userRouter)
